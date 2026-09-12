@@ -5,9 +5,21 @@
 
      composer install
 
-3.Copy .env & generate key
+3.Daftarkan middleware `admin`.
 
-    php artisan key:generate
+   **Laravel 11+** (edit `bootstrap/app.php`):
+   php
+   ->withMiddleware(function (Middleware $middleware) {
+       $middleware->alias([
+           'admin' => \App\Http\Middleware\AdminMiddleware::class,
+       ]);
+   })
+   ```
+
+   **Laravel 10** (edit `app/Http/Kernel.php`, tambahkan di `$routeMiddleware`):
+   php
+   'admin' => \App\Http\Middleware\AdminMiddleware::class,
+   
 
 4.Atur `.env` untuk koneksi MySQL:
    ```
