@@ -4,7 +4,6 @@
 2.instal package
 
      composer install
-
 3. Copy .env & generate key
    
      cp .env.example .env
