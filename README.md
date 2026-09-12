@@ -4,9 +4,10 @@
 2.instal package
 
      composer install
-3. Copy .env & generate key
+
+3.Copy .env & generate key
    
-php artisan key:generate
+    php artisan key:generate
 
 4. Atur `.env` untuk koneksi MySQL:
    ```
