@@ -14,6 +14,7 @@
    - `database/seeders/DatabaseSeeder.php`
    - `routes/web.php`
    - `resources/views/*`
+
 3.Daftarkan middleware `admin`.
 
    **Laravel 11+** (edit `bootstrap/app.php`):
