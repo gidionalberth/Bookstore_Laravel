@@ -1,7 +1,9 @@
 ﻿# Cara Run Program
 1.Download repo/clone repo ini dan buat project laravel baru
-    composer create-project laravel/laravel bookstore
-    cd bookstore
+   ```
+   composer create-project laravel/laravel bookstore
+   cd bookstore
+   ```
 
 2.Copy semua file dari folder ini ke dalam project Laravel yang baru dibuat,
    timpa/gabungkan folder berikut:
@@ -15,19 +17,18 @@
 3.Daftarkan middleware `admin`.
 
    **Laravel 11+** (edit `bootstrap/app.php`):
-   php
+   ```php
    ->withMiddleware(function (Middleware $middleware) {
        $middleware->alias([
            'admin' => \App\Http\Middleware\AdminMiddleware::class,
        ]);
    })
-   
+   ```
 
    **Laravel 10** (edit `app/Http/Kernel.php`, tambahkan di `$routeMiddleware`):
-   php
+   ```php
    'admin' => \App\Http\Middleware\AdminMiddleware::class,
-   
-
+   ```
 4.Atur `.env` untuk koneksi MySQL:
    ```
    DB_CONNECTION=mysql
