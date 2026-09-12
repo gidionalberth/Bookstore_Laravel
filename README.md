@@ -9,7 +9,7 @@
     cp .env.example .env
     php artisan key:generate
 
-4. Atur `.env` untuk koneksi MySQL:
+5. Atur `.env` untuk koneksi MySQL:
    ```
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
