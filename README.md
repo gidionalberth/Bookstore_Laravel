@@ -1,10 +1,17 @@
 ﻿# Cara Run Program
-1.Download repo/clone repo ini
+1.Download repo/clone repo ini dan buat project laravel baru
+    composer create-project laravel/laravel bookstore
+    cd bookstore
 
-2.instal package
-
-     composer install
-
+2.Copy semua file dari folder ini ke dalam project Laravel yang baru dibuat,
+   timpa/gabungkan folder berikut:
+   - `app/Models/*`
+   - `app/Http/Controllers/*`
+   - `app/Http/Middleware/AdminMiddleware.php`
+   - `database/migrations/*`
+   - `database/seeders/DatabaseSeeder.php`
+   - `routes/web.php`
+   - `resources/views/*`
 3.Daftarkan middleware `admin`.
 
    **Laravel 11+** (edit `bootstrap/app.php`):
@@ -14,7 +21,7 @@
            'admin' => \App\Http\Middleware\AdminMiddleware::class,
        ]);
    })
-   ```
+   
 
    **Laravel 10** (edit `app/Http/Kernel.php`, tambahkan di `$routeMiddleware`):
    php
